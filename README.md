@@ -16,3 +16,4 @@ simple sorting_visualizer using c++\sfml library
 2- pause and resume the sorting the sorting 
 3- make the user able to select how many columns will be sorted
 
+![sorting visualizer](https://user-images.githubusercontent.com/59856062/118664954-31c69a80-b7f2-11eb-9fb3-8ffd0cfcdc0e.gif)
