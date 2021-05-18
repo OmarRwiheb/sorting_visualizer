@@ -15,4 +15,4 @@ simple sorting_visualizer using c++\sfml library
 1- make the user able to select the sorting algorithm 
 2- pause and resume the sorting the sorting 
 3- make the user able to select how many columns will be sorted
---------------
+
