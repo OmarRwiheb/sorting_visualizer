@@ -1,4 +1,4 @@
-# sorting_visualizer
+# sorting visualizer
 a simple sorting visualizer using c++\sfml library
 
 ## it contains two types of sorting algorithms:
