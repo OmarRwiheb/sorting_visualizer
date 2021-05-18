@@ -4,6 +4,7 @@
 #include"Draw.h"
 #include"sortingAlgorithms.h"
 #include<time.h>
+#include<iostream>
 
 //makeTheShapes function is used to create the columns that we will sort
 //by making a vector of rectangles and give each rectangle position and width and random highet between 1 and 700
@@ -20,17 +21,36 @@ void makeTheShapes(std::vector<sf::RectangleShape>& shape) {
 
 int main() {
 
-    sf::RenderWindow window(sf::VideoMode(1500, 800), "Bubble Sort");
+    srand(0);
 
     std::vector<sf::RectangleShape> shape(50);
     makeTheShapes(shape);
 
-    sortType sortType;
+    sortType sort; 
 
-    while (window.isOpen()) {
-       sortType.BubbleSort(shape, window);
-       //sortType.SelectionSort(shape, window);
+    int selection = 0;
+   
+    std::cout << "Please select the sorting algorithm: \n";
+    std::cout << "1- bubble sort\n2- selection sort\n";
+    std::cin >> selection;
+    
+    sf::RenderWindow window(sf::VideoMode(1500, 800), "Bubble Sort");
+    switch (selection)
+    {
+    case 1: 
+        while (window.isOpen()) {
+            sort.BubbleSort(shape, window);
+        }
+    case 2:
+        while (window.isOpen()) {
+            sort.SelectionSort(shape, window);
+        }
+    default:
+        cout << "invalid choice.\n";
+        break;
     }
+
+ 
 
     return EXIT_SUCCESS;
 }
